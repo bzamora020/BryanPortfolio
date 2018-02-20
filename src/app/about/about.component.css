@@ -1,0 +1,39 @@
+.pictures {
+padding-left: 10%;
+padding-top: 15%;
+margin-bottom: 20%;
+
+
+
+
+}
+.pictures1 {
+    
+    padding-top: 30%;
+    margin-bottom: 20%;
+    transform: rotate(270deg);
+    margin-left: -8%;
+    
+    }
+    
+
+.paragraph {
+    width: 600px;
+    height: 200px;
+    background-color: rgb(167, 167, 167);
+    display: block;
+    margin-top: -50%;
+    margin-left: 60%;
+    padding: 3%;
+}
+
+.paragraph1 {
+    width: 600px;
+    height: 200px;
+    background-color: rgb(167, 167, 167);
+    display: block;
+    margin-top: -40%;
+    margin-left: 60%;
+    padding: 3%;
+}
+
