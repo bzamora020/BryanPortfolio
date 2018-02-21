@@ -32,3 +32,18 @@
 <div>
     <img class="pictures" src="./assets/snapchat.png" style="width:20%;height:20%;">
 </div>
+
+
+<form #contactForm ="ngForm" (ngSubmit) ="onSubmit()">
+
+  <input type="text" placeholder="Email" required [(ngModel)]="email" name="email" >
+
+  <input type="text" placeholder="First Name" required [(ngModel)]="first" name="first">
+
+  <input type="text" placeholder="Last Name" required [(ngModel)]="last" name="last">
+
+  <textarea  placeholder="Message" required [(ngModel)]="message" name="message"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
