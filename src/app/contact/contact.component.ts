@@ -28,13 +28,13 @@ export class ContactComponent implements OnInit {
       content: this.message,
 
     };
-    console.log(payload)
+    console.log(payload);
     this.pepe.post('https://seals-server.herokuapp.com' + '/contact-seals', payload)
       .subscribe((res) => {
-        console.log(res)
+        console.log(res);
       }, (err) => {
         console.log(err);
-      })
+      });
   }
 
 }

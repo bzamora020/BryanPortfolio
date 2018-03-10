@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { WorkComponent } from './work/work.component';
-
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {
@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: 'work',
     component: WorkComponent
+  },
+  {
+    path: 'admin/login',
+    component: AdminComponent
   },
 
   {
