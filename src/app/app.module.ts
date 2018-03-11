@@ -10,7 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { WorkComponent } from './work/work.component';
 import { AdminComponent } from './admin/admin.component';
-
+import { AuthService} from './_services/auth/auth.service';
 
 
 @NgModule({
@@ -28,7 +28,9 @@ import { AdminComponent } from './admin/admin.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
