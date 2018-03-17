@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../_services/auth/auth.service';
 import { Router } from '@angular/router';
 
+var localStorage = window.localStorage
+
 class Credentials {
   email: string;
   password: string;
@@ -10,6 +12,7 @@ class Credentials {
 interface ServerResponse {
   type: boolean;
   data: any;
+  token: any;
 }
 
 @Component({
@@ -32,6 +35,9 @@ export class AdminComponent implements OnInit {
         console.log(res);
         if (res.type === true) {
           console.log('Welcome Back Summoner');
+          console.log(res.token);
+          localStorage.setItem('authorization', res.token);
+
           this.credentials.email = "";
           this.credentials.password = "";
           this.router.navigateByUrl('home');
