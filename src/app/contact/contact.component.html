@@ -5,19 +5,23 @@
 <form #contactForm ="ngForm" (ngSubmit) ="onSubmit()">
 <div class="form-row">
   <div class="form-group col-md-3 ">
-  <input id="first" class="form-control align-middle" type="text" placeholder="First Name" required [(ngModel)]="first" name="first">
+  <input id="first" class="form-control align-middle" type="text" placeholder="First Name" required [(ngModel)]="credentials.first" name="first">
 </div>
 <div class="form-group col-md-3">
-  <input class="form-control" type="text" placeholder="Last Name" required [(ngModel)]="last" name="last">
+  <input class="form-control" type="text" placeholder="Last Name" required [(ngModel)]="credentials.last" name="last">
 </div>
 
 </div>
 <div class="form-group col-6">
-  <input class="form-control" type="text" placeholder="Email" required [(ngModel)]="email" name="email" >
+  <input class="form-control" type="text" placeholder="Email" required [(ngModel)]="credentials.email" name="email" >
+</div>
+
+<div class="form-group col-6">
+  <input class="form-control" type="text" placeholder="Phone Number" required [(ngModel)]="credentials.phoneNumber" name="phoneNumber" >
 </div>
 
 <div class="form-group">
-  <textarea class="form-control"  placeholder="Message" required [(ngModel)]="message" name="message"></textarea>
+  <textarea class="form-control"  placeholder="Message" required [(ngModel)]="credentials.message" name="message"></textarea>
 </div>
 
 

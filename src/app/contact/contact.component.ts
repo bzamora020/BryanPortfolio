@@ -2,6 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+class Credentials {
+  public first: string;
+  public last: string;
+  public email: string;
+  public phoneNumber: string;
+  public message: string;
+}
+
 
 @Component({
   selector: 'app-contact',
@@ -13,23 +21,15 @@ export class ContactComponent implements OnInit {
   public first: string;
   public last: string;
   public message: string;
-
+  public credentials: Credentials;
   constructor(private router: Router, public pepe: HttpClient) { }
 
   ngOnInit() {
-
+    this.credentials = new Credentials();
   }
   onSubmit() {
-    const payload = {
-      sealName: 'Bryan',
-      email: this.email,
-      firstName: this.first,
-      lastName: this.last,
-      content: this.message,
-
-    };
-    console.log(payload);
-    this.pepe.post('https://seals-server.herokuapp.com' + '/contact-seals', payload)
+    console.log(this.credentials);
+    this.pepe.post('http://localhost:3000' + '/twilioSubmit', this.credentials)
       .subscribe((res) => {
         console.log(res);
       }, (err) => {

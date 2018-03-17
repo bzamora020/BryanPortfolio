@@ -43,7 +43,7 @@ export class AdminComponent implements OnInit {
           this.router.navigateByUrl('home');
         } else if (this.credentials.email != 'bryan.aldair.zamora@gmail.com') {
           alert('Incorrect Email');
-        } else if (this.credentials.password != 'dontworryaboutit') {
+        } else if (this.credentials.password != 'mrlongbeach') {
           alert ('Incorrect Password');
           console.log(res.data);
         }
