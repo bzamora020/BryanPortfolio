@@ -32,6 +32,7 @@ export class ContactComponent implements OnInit {
     this.pepe.post('http://localhost:3000' + '/twilioSubmit', this.credentials)
       .subscribe((res) => {
         console.log(res);
+        this.credentials = new Credentials();
       }, (err) => {
         console.log(err);
       });

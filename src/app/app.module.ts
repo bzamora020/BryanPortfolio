@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { WorkComponent } from './work/work.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthService} from './_services/auth/auth.service';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AuthService} from './_services/auth/auth.service';
     ContactComponent,
     WorkComponent,
     AdminComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

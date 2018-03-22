@@ -1,7 +1,18 @@
+.title {
+    text-align:center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-bottom: 1px solid black;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding-bottom: 1%;
+}
+
 .pictures {
 margin-top: 50px;
 margin-left: 5%;
 margin-bottom: 10%;
+display: inline-block;
 
 
 
@@ -19,6 +30,9 @@ margin-bottom: 10%;
 .paragraph {
     /* width: 600px;
     height: 200px; */
+    font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 20px;
     background-color: rgba(167, 167, 167, 0.541);
     display: inline-block;
     margin-left: 10%;
@@ -28,10 +42,23 @@ margin-bottom: 10%;
 .paragraph1 {
     /* width: 600px;
     height: 200px; */
+    font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 20px;
     background-color: rgba(167, 167, 167, 0.541);
     display: inline-block;
     margin-top: 10%;
     margin-left: 15%;
     padding: 3%;
 }
-
+/* 
+.paragraph {
+    font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+     font-weight: normal;
+            font-size: 1.75em;
+     letter-spacing: .2em;
+     line-height: 1.1em;
+     margin:0px;
+     text-align: center;
+     text-transform: uppercase;
+    } */
