@@ -12,7 +12,7 @@
 margin-top: 50px;
 margin-left: 5%;
 margin-bottom: 10%;
-display: inline-block;
+/* display: inline-block; */
 
 
 
@@ -20,6 +20,7 @@ display: inline-block;
 .pictures1 {
     margin-top: 10%;
     margin-bottom: 10%;
+    margin-left: 5%;
     transform: rotate(270deg);
     /* margin-left: 2%; */
     
@@ -34,9 +35,10 @@ display: inline-block;
     font-weight: normal;
     font-size: 20px;
     background-color: rgba(167, 167, 167, 0.541);
-    display: inline-block;
+    /* display: inline-block; */
     margin-left: 10%;
     padding: 3%;
+    text-align:center;
 }
 
 .paragraph1 {
@@ -46,11 +48,30 @@ display: inline-block;
     font-weight: normal;
     font-size: 20px;
     background-color: rgba(167, 167, 167, 0.541);
-    display: inline-block;
+    /* display: inline-block; */
     margin-top: 10%;
     margin-left: 15%;
     padding: 3%;
 }
+
+.test3 {
+    display: flex;
+}
+.test {
+    flex:1;
+}
+.test2 {
+    flex:1;
+    margin-top: 10%;
+    /* padding-bottom: 10%; */
+}
+.test4 {
+    flex:1;
+    margin-top: 1%;
+
+}
+
+
 /* 
 .paragraph {
     font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;

@@ -1,0 +1,9 @@
+.nav>li:hover,
+.nav>li:focus {
+  background-color: #ffffff3a;
+
+}
+/* .nav-tabs > li > a, .nav-pills > li > a {
+
+    color: white
+} */

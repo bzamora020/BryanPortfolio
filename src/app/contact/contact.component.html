@@ -1,50 +1,58 @@
+<h1 class="title">
+  Contact Me</h1>
 
-<h1 class="title">Contact Me</h1>
-
-<div class="container" id="form-message" >
+<div class="container">
   <br>
-<form  #contactForm ="ngForm" (ngSubmit) ="onSubmit()">
-<div >
-  <div class="form-group col-md-3" >
-  <input class="form-control" id="first"  type="text" placeholder="First Name" required  [(ngModel)]="credentials.first" name="first">
-</div>
-<div class="form-group col-md-3">
-  <input class="form-control" type="text" placeholder="Last Name" required [(ngModel)]="credentials.last" name="last">
-</div>
-
-</div>
-<div class="form-group col-6">
-  <input class="form-control" type="text" placeholder="Email" required  [(ngModel)]="credentials.email" name="email" >
-</div>
-
-<div class="form-group col-6">
-  <input class="form-control" type="text" placeholder="Phone Number"  required [(ngModel)]="credentials.phoneNumber" name="phoneNumber" >
-</div>
-
-<div class="form-group" >
-  <textarea class="form-control"  placeholder="Message" required  [(ngModel)]="credentials.message" name="message"></textarea>
-</div>
-
-
-<button [disabled]="!contactForm.valid" id="submit" type="submit" class="btn btn-dark submit ">Submit</button>
-
-</form>
-
-    <a href="https://www.facebook.com/profile.php?id=100009625276574"><img class="icons1" src="./assets/facebook.png" style="width:10%;height:10%;"></a>
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
     
-
-    <a href="bryan.aldair.zamora@gmail.com"><img class="icons" src="./assets/gmail.png" style="width:10%;height:10%;"></a>
- 
-    
-
-      <a href="https://www.instagram.com/unusual_bryan/"><img class="icons" src="./assets/instagram.png" style="width:10%;height:10%;"></a>
-    
-    
-        <img class="icons" src="./assets/snapchat.png" style="width:8%;height:8%;">
-
-
+      <div class="form-group col-md-3">
+        <input class="form-control align-middle" id="first" type="text" placeholder="First Name" required [(ngModel)]="credentials.first"
+          name="first">
       </div>
+      <div class="form-group col-md-3">
+        <input class="form-control" type="text" placeholder="Last Name" required [(ngModel)]="credentials.last" name="last">
+      </div>
+
     
-    
+    <div class="form-group col-6">
+      <input class="form-control" type="text" placeholder="Email" required [(ngModel)]="credentials.email" name="email">
+    </div>
+
+    <div class="form-group col-6">
+      <input class="form-control align-middle" type="text" placeholder="Phone Number" required [(ngModel)]="credentials.phoneNumber"
+        name="phoneNumber">
+    </div>
+
+    <div class="form-group">
+      <textarea class="form-control" placeholder="Message" required [(ngModel)]="credentials.message" name="message"></textarea>
+    </div>
+
+
+    <button [disabled]="!contactForm.valid" id="submit" type="submit" class="btn btn-dark submit ">Submit</button>
+
+  </form>
+
+  <a href="https://www.facebook.com/profile.php?id=100009625276574">
+    <img class="icons1" src="./assets/facebook.png" style="width:10%;height:10%;">
+  </a>
+
+
+  <a href="bryan.aldair.zamora@gmail.com">
+    <img class="icons" src="./assets/gmail.png" style="width:10%;height:10%;">
+  </a>
+
+
+
+  <a href="https://www.instagram.com/unusual_bryan/">
+    <img class="icons" src="./assets/instagram.png" style="width:10%;height:10%;">
+  </a>
+
+
+  <img class="icons" src="./assets/snapchat.png" style="width:8%;height:8%;">
+
+
+</div>
+
+
 
 <router-outlet></router-outlet>
