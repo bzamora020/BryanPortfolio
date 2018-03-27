@@ -13,7 +13,6 @@ const routes: Routes = [
     component: HomeComponent
   },
 
-
   {
     path: 'about',
     component: AboutComponent
@@ -31,7 +30,7 @@ const routes: Routes = [
     component: AdminComponent
   },
   {
-    path: 'blog',
+    path: 'blog/:id',
     component: BlogComponent
   },
 
