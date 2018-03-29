@@ -40,7 +40,7 @@ export class AdminComponent implements OnInit {
 
           this.credentials.email = "";
           this.credentials.password = "";
-          this.router.navigateByUrl('home');
+          this.router.navigateByUrl('admin/home');
         } else if (this.credentials.email != 'bryan.aldair.zamora@gmail.com') {
           alert('Incorrect Email');
         } else if (this.credentials.password != 'mrlongbeach') {

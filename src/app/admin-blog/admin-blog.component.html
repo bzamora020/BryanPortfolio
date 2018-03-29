@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg">
+      <h1 class="mt-4">Blog</h1>
+      <p class="lead">
+        by
+        <a>Bryan Zamora</a>
+      </p>
+      <hr>
+      <p>{{ blog.timeStamp }}</p>
+      <hr>
+      <img class="img-fluid rounded" src="./assets/comment.png" alt="">
+      <hr>
+      <h2>{{ blog.title }}</h2>
+      <br>
+      <!-- <h4>
+          1-30-18
+        </h4> -->
+      <h5>
+        {{ blog.journal }}
+      </h5>
+      <p>
+      </p>
+
+      <div class="card my-4">
+        <h5 class="card-header">Leave a Comment:</h5>
+        <div class="card-body">
+          <form #commentForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input class="form-control align-middle" required type="text" placeholder="Your Name" [(ngModel)]="newComment.name" [ngModelOptions]="{standalone: true}">
+              <br>
+              <textarea required class="form-control" placeholder="Your Comment" [(ngModel)]="newComment.message" [ngModelOptions]="{standalone: true}"
+                rows="3"></textarea>
+            </div>
+            <button [disabled]="!commentForm.valid" id="submit" type="submit" class="btn btn-dark submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <ul>
+        <li *ngFor="let comment of changeComments">
+          <h5> {{ comment.name }} </h5>
+          <h6> {{ comment.message }} </h6>
+          <p> {{ comment.timeStamp }} </p>
+          <ul>
+            <!-- <li *ngFor="let reply of comment.replies">
+              {{ reply.name }}: {{ reply.message }} {{ reply.timeStamp }}
+            </li> -->
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Single Comment -->
+      <div class="media mb-4">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+        <div class="media-body">
+          <h5 class="mt-0">Commenter Name</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+          vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+          in faucibus.
+        </div>
+      </div>
+      <!-- Comment with nested comments -->
+      <div class="media mb-4">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+        <div class="media-body">
+          <h5 class="mt-0">Commenter Name</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+          vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+          in faucibus.
+          <div class="media mt-4">
+            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+            <div class="media-body">
+              <h5 class="mt-0">Commenter Name</h5>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+              vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
+              felis in faucibus.
+            </div>
+          </div>
+          <div class="media mt-4">
+            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+            <div class="media-body">
+              <h5 class="mt-0">Commenter Name</h5>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+              vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
+              felis in faucibus.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+  <router-outlet></router-outlet>

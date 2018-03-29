@@ -13,6 +13,12 @@ import { WorkComponent } from './work/work.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthService} from './_services/auth/auth.service';
 import { BlogComponent } from './blog/blog.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminAboutComponent } from './admin-about/admin-about.component';
+import { AdminWorkComponent } from './admin-work/admin-work.component';
+import { AdminBlogComponent } from './admin-blog/admin-blog.component';
+import { AdminContactComponent } from './admin-contact/admin-contact.component';
+import { AuthGuard } from './_services/authguard/auth.guard';
 
 
 @NgModule({
@@ -24,6 +30,11 @@ import { BlogComponent } from './blog/blog.component';
     WorkComponent,
     AdminComponent,
     BlogComponent,
+    AdminHomeComponent,
+    AdminAboutComponent,
+    AdminWorkComponent,
+    AdminBlogComponent,
+    AdminContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +44,7 @@ import { BlogComponent } from './blog/blog.component';
   ],
   providers: [
     AuthService,
+    AuthGuard,
     CommentService,
   ],
   bootstrap: [AppComponent]
