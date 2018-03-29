@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
+import { CommentService } from '../app/_services/comment/comment.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -28,10 +29,11 @@ import { BlogComponent } from './blog/blog.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
-    AuthService
+    AuthService,
+    CommentService,
   ],
   bootstrap: [AppComponent]
 })

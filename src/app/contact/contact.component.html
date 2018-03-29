@@ -4,16 +4,16 @@
 <div class="container">
   <br>
   <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
-    
-      <div class="form-group col-md-3">
-        <input class="form-control align-middle" id="first" type="text" placeholder="First Name" required [(ngModel)]="credentials.first"
-          name="first">
-      </div>
-      <div class="form-group col-md-3">
-        <input class="form-control" type="text" placeholder="Last Name" required [(ngModel)]="credentials.last" name="last">
-      </div>
 
-    
+    <div class="form-group col-md-3">
+      <input class="form-control align-middle" id="first" type="text" placeholder="First Name" required [(ngModel)]="credentials.first"
+        name="first">
+    </div>
+    <div class="form-group col-md-3">
+      <input class="form-control" type="text" placeholder="Last Name" required [(ngModel)]="credentials.last" name="last">
+    </div>
+
+
     <div class="form-group col-6">
       <input class="form-control" type="text" placeholder="Email" required [(ngModel)]="credentials.email" name="email">
     </div>
