@@ -36,7 +36,7 @@ export class AdminComponent implements OnInit {
         if (res.type === true) {
           console.log('Welcome Back Summoner');
           console.log(res.token);
-          localStorage.setItem('authorization', res.token);
+          localStorage.setItem('userToken', res.token);
 
           this.credentials.email = "";
           this.credentials.password = "";

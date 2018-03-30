@@ -3,42 +3,70 @@
     <img src="/assets/letter-b.png" width="30" height="30">
   </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ml-auto nav nav-pills">
-        
-          <li class="nav-item">
-          <a class="nav-link" routerLink="home" routerLinkActive="active" >Home </a>
-        </li>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto nav nav-pills">
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="home" routerLinkActive="active">Home </a>
+      </li>
+      <div *ngIf="LoggedIn">
         <li class="nav-item">
-          <a class="nav-link" routerLink="about" routerLinkActive="active">About</a>
+          <a class="nav-link" routerLink="admin/home" routerLinkActive="active">Admin Home </a>
         </li>
+      </div>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about" routerLinkActive="active">About</a>
+      </li>
+      <div *ngIf="LoggedIn">
         <li class="nav-item">
-            <a class="nav-link" routerLink="work" routerLinkActive="active">Work</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" routerLink="blog/5ab6955a5ee6a60a24ef4175" routerLinkActive="active"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="blog/5ab6957f5ee6a60a24ef4176" routerLinkActive="active">1-31-18</a>
-            <a class="dropdown-item" routerLink="blog/5ab694ef5ee6a60a24ef4174" routerLinkActive="active">2-1-18</a>
-            <a class="dropdown-item" routerLink="blog/5ab696325ee6a60a24ef4177" routerLinkActive="active">2-2-18</a>
-            <a class="dropdown-item" routerLink="blog/5ab696ef5ee6a60a24ef4178" routerLinkActive="active">2-3-18</a>
-
-
-          </div>
+          <a class="nav-link" routerLink="admin/about" routerLinkActive="active">Admin About </a>
         </li>
-
+      </div>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="work" routerLinkActive="active">Work</a>
+      </li>
+      <div *ngIf="LoggedIn">
         <li class="nav-item">
-          <a class="nav-link" routerLink="contact" routerLinkActive="active">Contact</a>
+          <a class="nav-link" routerLink="admin/work" routerLinkActive="active">Admin Work </a>
         </li>
-       
-      </ul>
-    </div>
-  </nav>
-  
+      </div>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="blog/5ab6955a5ee6a60a24ef4175" routerLinkActive="active" id="navbarDropdown"
+          role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="blog/5ab6957f5ee6a60a24ef4176" routerLinkActive="active">1-31-18</a>
+          <a class="dropdown-item" routerLink="blog/5ab694ef5ee6a60a24ef4174" routerLinkActive="active">2-1-18</a>
+          <a class="dropdown-item" routerLink="blog/5ab696325ee6a60a24ef4177" routerLinkActive="active">2-2-18</a>
+          <a class="dropdown-item" routerLink="blog/5ab696ef5ee6a60a24ef4178" routerLinkActive="active">2-3-18</a>
+        </div>
+      </li>
+
+      <div *ngIf="LoggedIn">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="admin/blog" routerLinkActive="active">Admin Blog </a>
+        </li>
+      </div>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="contact" routerLinkActive="active">Contact</a>
+      </li>
+      <div *ngIf="LoggedIn">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="admin/contact" routerLinkActive="active">Admin Contact </a>
+        </li>
+      </div>
+      <button *ngIf="LoggedIn" id="logOutButton" type="button" class="btn btn-dark" (click)="Logout()">Log Out</button>
+
+    </ul>
+  </div>
+</nav>
+
 
 
 <router-outlet></router-outlet>
